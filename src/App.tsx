@@ -15,29 +15,31 @@ export const App: React.FC = () => {
     <div className="App">
       <h1>Dynamic list of Goods</h1>
 
-      <button
-        type="button"
-        data-cy="all-button"
-        onClick={() => handleRequest(getAll())}
-      >
-        Load all goods
-      </button>
+      <div className="buttons">
+        <button
+          type="button"
+          data-cy="all-button"
+          onClick={() => handleRequest(getAll())}
+        >
+          Load all goods
+        </button>
 
-      <button
-        type="button"
-        data-cy="first-five-button"
-        onClick={() => handleRequest(get5First())}
-      >
-        Load 5 first goods
-      </button>
+        <button
+          type="button"
+          data-cy="first-five-button"
+          onClick={() => handleRequest(get5First())}
+        >
+          Load 5 first goods
+        </button>
 
-      <button
-        type="button"
-        data-cy="red-button"
-        onClick={() => handleRequest(getRedGoods())}
-      >
-        Load red goods
-      </button>
+        <button
+          type="button"
+          data-cy="red-button"
+          onClick={() => handleRequest(getRedGoods())}
+        >
+          Load red goods
+        </button>
+      </div>
 
       <GoodsList goods={goods} />
     </div>
